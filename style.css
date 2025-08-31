@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    background-color: #1e272e; /* Warna latar belakang gelap */
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.game-container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #2c3e50; /* Warna kontainer lebih terang */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+/* Papan Skor */
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.score p {
+    margin: 5px 0;
+}
+
+.score p:last-child {
+    font-size: 1.5em;
+}
+
+/* Layar Pertarungan */
+.match-screen {
+    display: none; /* Sembunyi secara default */
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.player-side, .computer-side {
+    flex: 1;
+}
+
+.match-screen img {
+    width: 120px;
+    height: 120px;
+}
+
+.vs {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+/* Animasi Tangan Bergoyang */
+@keyframes shake {
+    0% { transform: rotate(0deg) translateY(0px); }
+    25% { transform: rotate(10deg) translateY(-10px); }
+    75% { transform: rotate(-10deg) translateY(-10px); }
+    100% { transform: rotate(0deg) translateY(0px); }
+}
+
+.shake {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) 3; /* Ulangi 3 kali */
+}
+
+/* Pesan Hasil */
+.result-message {
+    margin: 20px 0;
+    min-height: 80px; /* Beri ruang agar layout tidak berantakan */
+}
+
+.result-message p {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+}
+
+#playAgainBtn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#playAgainBtn:hover {
+    background-color: #2980b9;
+}
+
+/* Layar Pemilihan */
+.selection-screen .weapons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.weapon {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.weapon:hover {
+    transform: scale(1.1);
+}
+
+.weapon img {
+    width: 100px;
+    height: 100px;
+    background-color: #1e272e;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.weapon p {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+/* Class Utility */
+.hidden {
+    display: none !important;
+}

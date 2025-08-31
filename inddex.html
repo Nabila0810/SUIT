@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUIT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1> Nabila & Svkti </h1>
+
+        <div class="score-board">
+            <div class="score">
+                <p>Menang</p>
+                <p id="wins">0</p>
+            </div>
+            <div class="score">
+                <p>Kalah</p>
+                <p id="losses">0</p>
+            </div>
+            <div class="score">
+                <p>Seri</p>
+                <p id="draws">0</p>
+            </div>
+        </div>
+
+        <div class="match-screen" id="matchScreen">
+            <div class="Nabilacl">
+                <h2>Nabilacl</h2>
+                <img id="nabilacl" src="images/nabilacl.jpg" alt="nabilacl">
+            </div>
+            <div class="vs">v/s</div>
+            <div class="Svkti">
+                <h2>Svkti</h2>
+                <img id="svkti" src="images/svkti.png" alt="svkti">
+            </div>
+        </div>
+
+        <div class="result-message" id="resultMessage">
+            <p id="messageText">Ayo Suit!</p>
+            <button id="playAgainBtn" class="hidden">Main Lagi</button>
+        </div>
+
+        <div class="selection-screen" id="selectionScreen">
+            <h2>Pilih Senjatamu</h2>
+            <div class="weapons">
+                <div class="weapon" data-choice="rock">
+                    <img src="images/batu.png" alt="Batu">
+                    <p>Batu</p>
+                </div>
+                <div class="weapon" data-choice="paper">
+                    <img src="images/kertas.png" alt="Kertas">
+                    <p>Kertas</p>
+                </div>
+                <div class="weapon" data-choice="scissors">
+                    <img src="images/gunting.png" alt="Gunting">
+                    <p>Gunting</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
